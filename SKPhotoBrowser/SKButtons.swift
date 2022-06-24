@@ -16,7 +16,7 @@ class SKButton: UIButton {
     internal var hideFrame: CGRect!
     
     fileprivate var insets: UIEdgeInsets {
-        if UI_USER_INTERFACE_IDIOM() == .phone {
+        if UIDevice.current.userInterfaceIdiom == .phone {
             return UIEdgeInsets(top: 15.25, left: 15.25, bottom: 15.25, right: 15.25)
         } else {
             return UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
@@ -25,7 +25,7 @@ class SKButton: UIButton {
     fileprivate let size: CGSize = CGSize(width: 44, height: 44)
     fileprivate var marginX: CGFloat = 0
     fileprivate var marginY: CGFloat = 0
-    fileprivate var extraMarginY: CGFloat = 20 //NOTE: dynamic to static 
+    fileprivate var extraMarginY: CGFloat = 20 // NOTE: dynamic to static 
     
     func setup(_ imageName: String) {
         backgroundColor = .clear
